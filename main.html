@@ -2,134 +2,165 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cards Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Gallery</title>
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <!-- Lightbox2 CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom styles to fulfill requirements */
+        
+        /* Center-align text in headings and paragraphs */
+        h6,
+        p {
+            text-align: center;
+        }
 
-  <style>
-    h2 {
-      text-align: center;
-      margin: 30px 0;
-    }
+        /* Styling requirement: Cards should have a border radius */
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%; /* Ensures cards in the same row are the same height */
+        }
 
-    h6,
-    p {
-      text-align: center;
-    }
-
-    .card {
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .card img {
-      cursor: pointer;
-      border-radius: 10px 10px 0 0;
-    }
-  </style>
+        /* Consistent image styling */
+        .card-img-top {
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+            height: 200px; 
+            object-fit: cover; 
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- the entire body must be written by student -->
+    
+    <div class="container py-5">
+        
+        <h2 class="text-center fw-bold mb-5">Cards Gallery</h2>
 
-  <div class="container">
-    <h2>Cards Gallery</h2>
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div class="card shadow-sm w-100">
+                    <a href="Screenshot 2025-11-06 201206.jpg" data-lightbox="gallery" data-title="Skyscrapers piercing through the fog in Dubai.">
+                        <img src="Screenshot 2025-11-06 201206.jpg" class="card-img-top" alt="Dubai Skyscrapers in Fog">
+                    </a>
+                    <div class="card-body">
+                        <h6>Desert Metropolis</h6>
+                        <p class="card-text small text-muted">A breathtaking view of city towers above the clouds.</p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="row g-3">
-      <!-- Card 1 -->
-      <div class="col-md-4 col-lg-3 col-sm-6">
-        <div class="card">
-          <a href="image1.jpg" data-lightbox="gallery" data-title="Image 1">
-            <img src="image1.jpg" class="card-img-top" alt="Image 1">
-          </a>
-          <div class="card-body">
-            <h6>Image 1</h6>
-            <p>Sample description for Image 1.</p>
-          </div>
+            <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div class="card shadow-sm w-100">
+                    <a href="Screenshot 2025-11-06 201145.jpg" data-lightbox="gallery" data-title="The vibrant Puxi and Pudong skylines in Shanghai at sunset.">
+                        <img src="Screenshot 2025-11-06 201145.jpg" class="card-img-top" alt="Shanghai Skyline">
+                    </a>
+                    <div class="card-body">
+                        <h6>Vibrant Shanghai</h6>
+                        <p class="card-text small text-muted">A golden sunset over the Lujiazui financial district.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div class="card shadow-sm w-100">
+                    <a href="Screenshot 2025-11-06 201009.jpg" data-lightbox="gallery" data-title="Longtail boats navigating the turquoise waters of Maya Bay, Thailand.">
+                        <img src="Screenshot 2025-11-06 201009.jpg" class="card-img-top" alt="Thailand's Phi Phi Islands">
+                    </a>
+                    <div class="card-body">
+                        <h6>Tropical Lagoon</h6>
+                        <p class="card-text small text-muted">Emerald waters surrounded by towering limestone cliffs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div class="card shadow-sm w-100">
+                    <a href="Screenshot 2025-11-06 201103.jpg" data-lightbox="gallery" data-title="A still, reflective mountain lake in the Canadian Rockies.">
+                        <img src="Screenshot 2025-11-06 201103.jpg" class="card-img-top" alt="Canadian Rockies Lake">
+                    </a>
+                    <div class="card-body">
+                        <h6>Alpine Reflection</h6>
+                        <p class="card-text small text-muted">Snow-capped mountains mirrored in a clear blue lake.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div class="card shadow-sm w-100">
+                    <a href="Screenshot 2025-11-06 201226.jpg" data-lightbox="gallery" data-title="Aerial view of a dramatic volcanic coastline and ocean waves.">
+                        <img src="Screenshot 2025-11-06 201226.jpg" class="card-img-top" alt="Volcanic Coastline">
+                    </a>
+                    <div class="card-body">
+                        <h6>Ocean's Edge</h6>
+                        <p class="card-text small text-muted">A rugged cliff face meets the powerful Pacific waves.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div class="card shadow-sm w-100">
+                    <a href="Screenshot 2025-11-06 201122.jpg" data-lightbox="gallery" data-title="Rocky island formations extending into the vast ocean.">
+                        <img src="Screenshot 2025-11-06 201122.jpg" class="card-img-top" alt="Island Peaks">
+                    </a>
+                    <div class="card-body">
+                        <h6>Isolated Peaks</h6>
+                        <p class="card-text small text-muted">Dramatic rock formations emerging from the sea.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div class="card shadow-sm w-100">
+                    <a href="Screenshot 2025-11-06 201036.jpg" data-lightbox="gallery" data-title="A solitary red house in the rolling, snowy hills of Iceland.">
+                        <img src="Screenshot 2025-11-06 201036.jpg" class="card-img-top" alt="Iceland Landscape">
+                    </a>
+                    <div class="card-body">
+                        <h6>Icelandic Retreat</h6>
+                        <p class="card-text small text-muted">A tiny home against a backdrop of vast, rugged land.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div class="card shadow-sm w-100">
+                    <a href="Screenshot 2025-11-06 195126.jpg" data-lightbox="gallery" data-title="Dense evergreen forest climbing a snowy, stepped mountain face.">
+                        <img src="Screenshot 2025-11-06 195126.jpg" class="card-img-top" alt="Evergreen Forest Mountain">
+                    </a>
+                    <div class="card-body">
+                        <h6>Forest Ascent</h6>
+                        <p class="card-text small text-muted">A sharp contrast between dark pines and white rock.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div class="card shadow-sm w-100">
+                    <a href="Screenshot 2025-11-06 201246.jpg" data-lightbox="gallery" data-title="A breathtaking view of a turquoise bay nestled between steep green mountains.">
+                        <img src="Screenshot 2025-11-06 201246.jpg" class="card-img-top" alt="Norwegian Fjord Coast">
+                    </a>
+                    <div class="card-body">
+                        <h6>Fjord Coastline</h6>
+                        <p class="card-text small text-muted">A stunning elevated view of a remote beach and ocean.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-4 col-lg-3 col-sm-6">
-        <div class="card">
-          <a href="image2.jpg" data-lightbox="gallery" data-title="Image 2">
-            <img src="image2.jpg" class="card-img-top" alt="Image 2">
-          </a>
-          <div class="card-body">
-            <h6>Image 2</h6>
-            <p>Sample description for Image 2.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-4 col-lg-3 col-sm-6">
-        <div class="card">
-          <a href="image3.jpg" data-lightbox="gallery" data-title="Image 3">
-            <img src="image3.jpg" class="card-img-top" alt="Image 3">
-          </a>
-          <div class="card-body">
-            <h6>Image 3</h6>
-            <p>Sample description for Image 3.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-md-4 col-lg-3 col-sm-6">
-        <div class="card">
-          <a href="image4.jpg" data-lightbox="gallery" data-title="Image 4">
-            <img src="image4.jpg" class="card-img-top" alt="Image 4">
-          </a>
-          <div class="card-body">
-            <h6>Image 4</h6>
-            <p>Sample description for Image 4.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="col-md-4 col-lg-3 col-sm-6">
-        <div class="card">
-          <a href="image5.jpg" data-lightbox="gallery" data-title="Image 5">
-            <img src="image5.jpg" class="card-img-top" alt="Image 5">
-          </a>
-          <div class="card-body">
-            <h6>Image 5</h6>
-            <p>Sample description for Image 5.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="col-md-4 col-lg-3 col-sm-6">
-        <div class="card">
-          <a href="image6.jpg" data-lightbox="gallery" data-title="Image 6">
-            <img src="image6.jpg" class="card-img-top" alt="Image 6">
-          </a>
-          <div class="card-body">
-            <h6>Image 6</h6>
-            <p>Sample description for Image 6.</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-  <!-- Lightbox JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 
-  <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
