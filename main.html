@@ -2,125 +2,139 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards Gallery</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards Gallery</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #1877f2;
+    }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    .card {
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    .card:hover {
+      transform: scale(1.05);
+    }
 
-    <style>
-        /* Custom styles to fulfill requirements */
-        
-        /* The h6 and p text-align is covered by the Bootstrap class 'text-center' in the HTML now */
-        
-        /* Styling requirement: Cards should have a border radius */
-        .card {
-            border-radius: 10px;
-            overflow: hidden;
-            height: 100%; /* Ensures cards in the same row are the same height */
-        }
+    .card-img-top {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
 
-        /* Consistent image styling */
-        .card-img-top {
-            border-radius: 10px 10px 0 0;
-            width: 100%;
-            height: 200px; 
-            object-fit: cover; 
-            cursor: pointer;
-        }
-    </style>
+    .card-body h6,
+    .card-body p {
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-    
-    <div class="container py-5">
-        
-        <h2 class="text-center fw-bold mb-5">Cards Gallery</h2>
 
-        <div class="row g-4 justify-content-center">
-            
-            <div class="col-6 col-md-4 col-lg-3 d-flex">
-                <div class="card shadow-sm w-100">
-                    <a href="Screenshot 2025-11-06 201206.jpg" data-lightbox="gallery" data-title="Skyscrapers piercing through the fog in Dubai." class="lightbox">
-                        <img src="Screenshot 2025-11-06 201206.jpg" class="card-img-top" alt="Dubai Skyscrapers in Fog">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="text-center">Desert Metropolis</h6>
-                        <p class="card-text small text-muted text-center">A breathtaking view of city towers above the clouds.</p>
-                    </div>
-                </div>
-            </div>
+  <div class="container my-5">
+    <h2>Cards Gallery</h2>
+    <div class="row g-4">
 
-            <div class="col-6 col-md-4 col-lg-3 d-flex">
-                <div class="card shadow-sm w-100">
-                    <a href="Screenshot 2025-11-06 201145.jpg" data-lightbox="gallery" data-title="The vibrant Puxi and Pudong skylines in Shanghai at sunset." class="lightbox">
-                        <img src="Screenshot 2025-11-06 201145.jpg" class="card-img-top" alt="Shanghai Skyline">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="text-center">Vibrant Shanghai</h6>
-                        <p class="card-text small text-muted text-center">A golden sunset over the Lujiazui financial district.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3 d-flex">
-                <div class="card shadow-sm w-100">
-                    <a href="Screenshot 2025-11-06 201009.jpg" data-lightbox="gallery" data-title="Longtail boats navigating the turquoise waters of Maya Bay, Thailand." class="lightbox">
-                        <img src="Screenshot 2025-11-06 201009.jpg" class="card-img-top" alt="Thailand's Phi Phi Islands">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="text-center">Tropical Lagoon</h6>
-                        <p class="card-text small text-muted text-center">Emerald waters surrounded by towering limestone cliffs.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3 d-flex">
-                <div class="card shadow-sm w-100">
-                    <a href="Screenshot 2025-11-06 201103.jpg" data-lightbox="gallery" data-title="A still, reflective mountain lake in the Canadian Rockies." class="lightbox">
-                        <img src="Screenshot 2025-11-06 201103.jpg" class="card-img-top" alt="Canadian Rockies Lake">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="text-center">Alpine Reflection</h6>
-                        <p class="card-text small text-muted text-center">Snow-capped mountains mirrored in a clear blue lake.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3 d-flex">
-                <div class="card shadow-sm w-100">
-                    <a href="Screenshot 2025-11-06 201226.jpg" data-lightbox="gallery" data-title="Aerial view of a dramatic volcanic coastline and ocean waves." class="lightbox">
-                        <img src="Screenshot 2025-11-06 201226.jpg" class="card-img-top" alt="Volcanic Coastline">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="text-center">Ocean's Edge</h6>
-                        <p class="card-text small text-muted text-center">A rugged cliff face meets the powerful Pacific waves.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3 d-flex">
-                <div class="card shadow-sm w-100">
-                    <a href="Screenshot 2025-11-06 201122.jpg" data-lightbox="gallery" data-title="Rocky island formations extending into the vast ocean." class="lightbox">
-                        <img src="Screenshot 2025-11-06 201122.jpg" class="card-img-top" alt="Island Peaks">
-                    </a>
-                    <div class="card-body">
-                        <h6 class="text-center">Isolated Peaks</h6>
-                        <p class="card-text small text-muted text-center">Dramatic rock formations emerging from the sea.</p>
-                    </div>
-                </div>
-            </div>
-
+      <!-- Card 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://via.placeholder.com/600x400?text=Image1">
+          <img src="https://via.placeholder.com/300x200?text=Image1" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h6>Image 1</h6>
+            <p>Beautiful view of Image 1</p>
+          </div>
         </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://via.placeholder.com/600x400?text=Image2">
+          <img src="https://via.placeholder.com/300x200?text=Image2" class="card-img-top" alt="Image 2">
+          <div class="card-body">
+            <h6>Image 2</h6>
+            <p>Beautiful view of Image 2</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://via.placeholder.com/600x400?text=Image3">
+          <img src="https://via.placeholder.com/300x200?text=Image3" class="card-img-top" alt="Image 3">
+          <div class="card-body">
+            <h6>Image 3</h6>
+            <p>Beautiful view of Image 3</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://via.placeholder.com/600x400?text=Image4">
+          <img src="https://via.placeholder.com/300x200?text=Image4" class="card-img-top" alt="Image 4">
+          <div class="card-body">
+            <h6>Image 4</h6>
+            <p>Beautiful view of Image 4</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://via.placeholder.com/600x400?text=Image5">
+          <img src="https://via.placeholder.com/300x200?text=Image5" class="card-img-top" alt="Image 5">
+          <div class="card-body">
+            <h6>Image 5</h6>
+            <p>Beautiful view of Image 5</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-img="https://via.placeholder.com/600x400?text=Image6">
+          <img src="https://via.placeholder.com/300x200?text=Image6" class="card-img-top" alt="Image 6">
+          <div class="card-body">
+            <h6>Image 6</h6>
+            <p>Beautiful view of Image 6</p>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Lightbox Modal -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img src="" id="lightboxImage" class="img-fluid rounded" alt="Lightbox Image">
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Lightbox functionality
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImage = document.getElementById('lightboxImage');
 
+    lightboxModal.addEventListener('show.bs.modal', event => {
+      const card = event.relatedTarget;
+      const imgSrc = card.getAttribute('data-bs-img');
+      lightboxImage.src = imgSrc;
+    });
+  </script>
 </body>
+
 </html>
